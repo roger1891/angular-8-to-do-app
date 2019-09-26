@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Job</h1>
+<div mat-dialog-content>
+  <p>Please enter job details</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.name" placeholder="Job Name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Status</mat-label>
+    <mat-select  [(ngModel)]="data.status">
+      <mat-option *ngFor="let datum of selectData" [value]="datum.key" ngDefaultControl>
+        {{datum.value}}
+      </mat-option>
+    </mat-select>      
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput [(ngModel)]="data.description" placeholder="Description" rows="5"></textarea>
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="{name : data.name, status: data.status, description: data.description}" cdkFocusInitial>Ok</button>
+</div>
+

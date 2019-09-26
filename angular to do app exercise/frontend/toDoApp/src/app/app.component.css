@@ -1,0 +1,23 @@
+/*expansion*/
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*form field*/
+mat-form-field {
+  margin-right: 12px;
+}
+
+mat-panel-title {
+  padding: 10px;
+}
+
+.green-background {
+  background-color:#228B22;
+}
